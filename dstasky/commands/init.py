@@ -59,7 +59,7 @@ def ensure_init_command() -> bool:
     """
 
     if not is_initialized():
-        logger.error('Please run \'dstasky init\' first!')
+        logger.error('Please run/rerun \'dstasky init\' first!')
         return False
 
     _ensure_init_folders()

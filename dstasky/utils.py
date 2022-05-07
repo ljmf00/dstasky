@@ -113,3 +113,11 @@ def use_color(setting: str) -> bool:
             os.getenv('TERM') != 'dumb'
         )
     )
+
+
+def find_file(name: str, path: str) -> bool:
+    for root, dirs, files in os.walk(path):
+        if name in files:
+            return True
+
+    return False
