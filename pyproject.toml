@@ -8,7 +8,23 @@ authors = [{name = "Luís Ferreira", email = "contact@lsferreira.net"}]
 readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
+requires-python = ">=3.7"
 dynamic = ["version", "description"]
+dependencies = [
+    "PyYAML",
+    "pygit2",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+doc = ["sphinx"]
 
 [project.urls]
 Home = "https://github.com/ljmf00/dstasky"
+Source = "https://github.com/ljmf00/dstasky"
+
+[project.scripts]
+dstasky = "dstasky.main:main"
